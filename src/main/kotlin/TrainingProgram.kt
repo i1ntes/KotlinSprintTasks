@@ -1,16 +1,16 @@
 fun main() {
-    val armTraining = true
-    val legTraining = false
-    val backTraining = false
-    val pressTraining = true
+    val day = 5
 
-    val canArmTraining = !armTraining
-    val canBackTraining = !backTraining
-    val canPressTraining = !pressTraining
-    val canLegTraining = !legTraining
+    val isFirstGroup = day % 2 != 0
+    val isSecondGroup = !isFirstGroup
 
-    println("""|Упражнения для рук: $canArmTraining
-    |Упражнения для ног: $canLegTraining
-    |Упражнения для спины: $canBackTraining
-    |Упражнения для пресса: $canPressTraining""".trimMargin())
+    val hands = isFirstGroup
+    val legs = isSecondGroup
+    val back = isSecondGroup
+    val press = isFirstGroup
+
+    println("""|Упражнения для рук: $hands
+    |Упражнения для ног: $legs
+    |Упражнения для спины: $back
+    |Упражнения для пресса: $press""".trimMargin())
 }
