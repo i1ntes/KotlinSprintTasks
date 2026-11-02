@@ -16,12 +16,14 @@ fun main() {
     val isWeatherSafe = readLine()
     val isWeatherSafeValidation = isWeatherSafe == "Да"
 
-    val shipCanDepart = (isHullIntactValidation) && (hasEnoughCrew >= hasEnoughCrewMin)
+    val shipCanDepart = (isHullIntactValidation)
             && (hasEnoughCrew >= hasEnoughCrewMin)
-            && (hasEnoughCargo > hasEnoughCargoMin) ||
-            (!isHullIntactValidation) &&
-            (hasEnoughCrew == hasEnoughCrewMax) &&
-            (hasEnoughCargo >= hasEnoughCargoMin) && (isWeatherSafeValidation)
+            && (hasEnoughCrew <= hasEnoughCrewMax)
+            && (hasEnoughCargo > hasEnoughCargoMin)
+            || (!isHullIntactValidation)
+            && (hasEnoughCrew == hasEnoughCrewMax)
+            && (hasEnoughCargo >= hasEnoughCargoMin)
+            && (isWeatherSafeValidation)
 
     println("Корабль готов к отплытию: $shipCanDepart")
 }
