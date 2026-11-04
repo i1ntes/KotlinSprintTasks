@@ -1,8 +1,10 @@
 fun main() {
+    val firstNumber = 2
+    val secondNumber = 3
     println("""|Решите пример, чтобы доказать, что Вы не бот:
-        |2+2=""".trimMargin())
-    val result = readln().toIntOrNull()
+        |$firstNumber+$secondNumber=""".trimMargin())
+    val input = readln().toIntOrNull()
 
-    if (result == 4) println("Добро пожаловать!")
-    else println("Доступ закрыт")
+    if (input == firstNumber + secondNumber) println("Добро пожаловать!")
+    else println("Доступ запрещен.")
 }
