@@ -8,7 +8,7 @@ fun main() {
     if ((inputNumber1 == WINNING_NUMBER_1
         || inputNumber1 == WINNING_NUMBER_2)
         && (inputNumber2 == WINNING_NUMBER_1
-        || inputNumber2 == WINNING_NUMBER_2)) {
+        || inputNumber2 == WINNING_NUMBER_2) && (inputNumber1 != inputNumber2)) {
         println("Поздравляем! Вы выиграли главный приз!")
     } else if (inputNumber1 == WINNING_NUMBER_1
         || inputNumber1 == WINNING_NUMBER_2
