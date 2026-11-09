@@ -10,7 +10,7 @@ fun main() {
         if (inputNumber == winningNumber) {
             println("Это была великолепная игра!")
             break
-        } else if (inputNumber != winningNumber && attempts == 0) {
+        } else if (attempts == 0) {
             println("Было загадано число $winningNumber")
         } else {
             println("Неверно. Осталось $attempts попыток.")
