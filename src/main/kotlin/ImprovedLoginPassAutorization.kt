@@ -14,7 +14,6 @@ fun main() {
         } else if (attemptsToPass == 0) println("Доступ запрещен")
         else {
             println("Ответ неверный. Количество оставшихся попыток до блокировки: $attemptsToPass. Решите новый пример:")
-            continue
         }
     }
 }
