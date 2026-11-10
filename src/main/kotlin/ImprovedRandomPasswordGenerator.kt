@@ -8,15 +8,18 @@ fun main() {
         }
     } while (passwordLength < PASSWORD_MINIMAL_LENGTH)
     var password = ""
-    val intRange = 0..9
+    val intCharRange = '0'..'9'
     val lowerCaseCharRange = 'a'..'z'
     val upperCaseCharRange = 'A'..'Z'
-    val arrayOfChar = intRange.toList() + lowerCaseCharRange.toList() + upperCaseCharRange.toList()
+    val arrayOfChar = intCharRange.toList() + lowerCaseCharRange.toList() + upperCaseCharRange.toList()
     do {
+        password = ""
         for (i in 1..passwordLength) {
             password += arrayOfChar.random()
         }
-    } while (!password.any { it in lowerCaseCharRange } && !password.any { it in upperCaseCharRange } && !password.any { it.code in intRange })
+    } while (!password.any { it in lowerCaseCharRange }
+        || !password.any { it in upperCaseCharRange }
+        || !password.any { it in intCharRange })
     println("Ваш новый пароль: $password")
 }
 
