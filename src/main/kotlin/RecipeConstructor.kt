@@ -5,7 +5,7 @@ fun main() {
     println("Хорошо, в твоем рецепте будет $recipeSize ингредиентов")
     recipe.forEachIndexed { index, item ->
         println("Какой ингредиент добавить?")
-        recipe.index = readln()
+        = readln()
     }
     println(recipe.joinToString(", "))
 }
