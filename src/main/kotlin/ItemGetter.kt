@@ -1,6 +1,6 @@
 fun main() {
     val arrayOfItems = arrayOf("курица", "вода", "морковь", "картофель", "лук", "соль")
-    println("Какой ингредиент вы ходите найти?")
+    println("Какой ингредиент вы хотите найти?")
     val userInput = readln()
     for (item in arrayOfItems) {
         if (userInput == item) {
