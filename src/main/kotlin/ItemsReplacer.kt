@@ -16,5 +16,5 @@ fun main() {
             }
         }
         if (!isItemFound) println("Такого ингредиента в рецепте нет, его заменить нельзя")
-    } while (userInput !in arrayOfItems)
+    } while (!isItemFound)
 }
