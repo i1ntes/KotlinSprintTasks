@@ -13,6 +13,7 @@ fun main() {
                 }
             }
             println("Готово! Вы сохранили следующий список: ${arrayOfItems.joinToString(", ")}")
+            break
         } else println("Такого ингредиента в рецепте нет, его заменить нельзя")
     } while (userInput !in arrayOfItems)
 
