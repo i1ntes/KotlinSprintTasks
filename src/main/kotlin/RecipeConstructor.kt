@@ -1,11 +1,10 @@
 fun main() {
     println("Укажите количество ингредиентов в рецепте")
     val recipeSize = readln().toInt()
-    val recipe = Array(recipeSize) {"Ингредиент: ${it + 1}:"}
     println("Хорошо, в твоем рецепте будет $recipeSize ингредиентов")
-    recipe.forEachIndexed { index, item ->
-        println("Какой ингредиент добавить?")
-        = readln()
+    val recipe = Array(recipeSize) {
+        println("Введите название ингредиента №${it + 1}")
+        readln()
     }
-    println(recipe.joinToString(", "))
+    println("Вот твой рецепт: ${recipe.joinToString(", ")}")
 }
