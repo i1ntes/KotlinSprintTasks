@@ -7,10 +7,11 @@ fun main() {
 fun passwordGenerator(passwordLength: Int): String {
     var password = ""
     val intCharRange = '0'..'9'
-    val symbolsCharRange = "!,#,$,%,&,',(,),*,+,,,-,.,/, ,\","
-    val listOfSymbolRange = symbolsCharRange.split(",")
+    val symbolsCharRange = "!;#;$;%;&;';(;);*;+;,;-; ;.;/;\";"
+    val listOfSymbolRange = symbolsCharRange.split(";")
     while (passwordLength > password.length) {
         password += intCharRange.random()
+        if (passwordLength > password.length)
         password += listOfSymbolRange.random()
     }
     return password
