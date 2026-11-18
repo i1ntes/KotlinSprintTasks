@@ -11,8 +11,9 @@ fun passwordGenerator(passwordLength: Int): String {
     val listOfSymbolRange = symbolsCharRange.split(";")
     while (passwordLength > password.length) {
         password += intCharRange.random()
-        if (passwordLength > password.length)
-        password += listOfSymbolRange.random()
+        if (passwordLength > password.length) {
+            password += listOfSymbolRange.random()
+        }
     }
     return password
 }
