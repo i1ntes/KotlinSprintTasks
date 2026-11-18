@@ -8,6 +8,7 @@ fun main() {
 }
 
 fun loginValidation(login: String, password: String): Boolean {
-    if (password.length < 4 || login.length < 4) return false
+    val requiredLength = 4
+    if (password.length < requiredLength || login.length < requiredLength) return false
     else return true
 }
