@@ -11,8 +11,8 @@ fun main() {
 }
 
 fun getToken(login: String, password: String): String? {
-    val token = tokenGeneration()
     if (EXPECTED_LOGIN == login && EXPECTED_PASSWORD == password) {
+        val token = tokenGeneration()
         return token
     } else return null
 }
@@ -20,8 +20,7 @@ fun getToken(login: String, password: String): String? {
 fun tokenGeneration(): String {
     val tokenLength = 32
     val tokenChars = ('0'..'9') + ('a'..'z') + ('A'..'Z')
-    var token: String? = null
-    token = (1..tokenLength).map {
+    val token = (1..tokenLength).map {
         tokenChars.random(Random)
     }.joinToString("")
     return token
