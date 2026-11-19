@@ -1,7 +1,7 @@
 fun main() {
     var totalHumanWins = 0
     do {
-        var humanWins = 0
+        val humanWins = 0
         val humanRoll = rollDice()
         val robotRoll = rollDice()
         println("Человек наролил: $humanRoll")
@@ -13,7 +13,7 @@ fun main() {
         totalHumanWins += countOfHumanWin
         println("Хотите бросить кости еще раз?\nВведите Да или Нет")
         val userInput = readln()
-    } while (userInput.contains("да", ignoreCase = true))
+    } while (userInput.contains("Да", ignoreCase = true))
     println("Человечество выиграло $totalHumanWins раз")
 }
 
