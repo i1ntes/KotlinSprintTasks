@@ -5,12 +5,10 @@ fun main() {
         password = "Password1",
         email = "user1@gmail.com",
     )
-    println("${user1.id}, ${user1.login}, ${user1.password}, ${user1.email}, ${user1.bio}")
-    println("Расскажите о себе")
-    val userInputBio = readln()
-    user1.bio = userInputBio
+    user1.getInfo()
+    user1.setBio()
     user1.changePassword()
-    println("${user1.id}, ${user1.login}, ${user1.password}, ${user1.email}, ${user1.bio}")
+    user1.getInfo()
 }
 
 class User2(
@@ -20,10 +18,19 @@ class User2(
     val email : String,
     var bio : String = ""
 ) {
+    fun getInfo() {
+        println("Id: $id, Login: $login, Password: $password, Email: $email, Bio: $bio")
+    }
+    fun setBio() {
+        println("Расскажите о себе")
+        val userInputBio = readln()
+        bio = userInputBio
+    }
     fun changePassword() {
         do {
             println("Для смены пароля, пожалуйста, напишите старый пароль")
             val oldPassword = readln()
+            if (oldPassword == password) break
             println("Неверный пароль")
         } while (oldPassword != password)
         println("Введите новый пароль")
