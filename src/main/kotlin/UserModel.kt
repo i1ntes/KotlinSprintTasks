@@ -18,7 +18,7 @@ fun main() {
 
 class User(
     var id: Int = 0,
-    var login: String,
-    var password : String,
-    var email : String,
+    val login: String,
+    val password : String,
+    val email : String,
 )
