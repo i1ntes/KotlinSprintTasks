@@ -1,7 +1,7 @@
 import kotlin.random.Random
 
 fun main() {
-    val login = "logi"
+    val login = "login"
     val password = "password"
     val itemsList = listOf("T-Shirt", "Dress", "Jeans")
     val getItemList = getItemList(getToken(login, password), itemsList)
