@@ -14,24 +14,27 @@ fun main() {
 class User2(
     var id: Int = 0,
     val login: String,
-    var password : String,
-    val email : String,
-    var bio : String = ""
+    var password: String,
+    val email: String,
+    var bio: String = "",
 ) {
     fun getInfo() {
         println("Id: $id, Login: $login, Password: $password, Email: $email, Bio: $bio")
     }
+
     fun setBio() {
         println("Расскажите о себе")
         val userInputBio = readln()
         bio = userInputBio
     }
+
     fun changePassword() {
         do {
             println("Для смены пароля, пожалуйста, напишите старый пароль")
             val oldPassword = readln()
-            if (oldPassword == password) break
-            println("Неверный пароль")
+            if (oldPassword != password) {
+                println("Неверный пароль")
+            }
         } while (oldPassword != password)
         println("Введите новый пароль")
         val newPassword = readln()
